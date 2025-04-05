@@ -1,0 +1,14 @@
+{
+    "welcome": "Welcome to Smart Agriculture Assistant",
+    "crop_selection": "Crop Selection",
+    "crop_desc": "Get recommendations for best crops based on your location and soil type",
+    "pest_control": "Pest Control",
+    "pest_desc": "Identify pests and get organic control methods",
+    "irrigation": "Irrigation Planner",
+    "irrigation_desc": "Get weather-based irrigation recommendations",
+    "market": "Market Prices",
+    "market_desc": "Check current and predicted market prices for your crops",
+    "404_title": "Page Not Found",
+    "404_message": "The page you are looking for doesn't exist or has been moved.",
+    "go_home": "Go Back Home"
+}
