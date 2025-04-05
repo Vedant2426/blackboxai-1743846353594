@@ -10,5 +10,45 @@
     "market_desc": "Check current and predicted market prices for your crops",
     "404_title": "Page Not Found",
     "404_message": "The page you are looking for doesn't exist or has been moved.",
-    "go_home": "Go Back Home"
+    "go_home": "Go Back Home",
+    
+    // Form labels and placeholders
+    "select_state": "Select your state",
+    "select_soil": "Select soil type",
+    "select_season": "Select season",
+    "select_region": "Select region",
+    "select_crop": "Select crop",
+    "state_label": "State/Region",
+    "soil_label": "Soil Type",
+    "season_label": "Season",
+    "market_region": "Region",
+    "market_crop": "Crop",
+    "moisture_label": "Current Soil Moisture (%)",
+    "moisture_placeholder": "Enter moisture percentage",
+    "search_pests": "Search pests...",
+    
+    // Buttons
+    "find_crops": "Find Suitable Crops",
+    "check_prices": "Check Prices",
+    "get_recommendation": "Get Irrigation Recommendation",
+    "view_controls": "View Control Methods",
+    
+    // Results labels
+    "current_price": "Current Price",
+    "predicted_price": "Predicted Price (Next Month)",
+    "price_trend": "Price Trend (Last 6 Months)",
+    "market_advice": "Market Advice",
+    "per_quintal": "per quintal",
+    "prediction_based": "Based on market trends",
+    "water_amount": "Water Amount",
+    "best_time": "Best Time",
+    "rainfall": "Rainfall",
+    "no_crops": "No crop recommendations available for these conditions",
+    "no_pests": "No pests found matching your search",
+    "view_details": "Click for more details",
+    
+    // Forecast labels
+    "day_1": "Day 1",
+    "day_2": "Day 2",
+    "day_3": "Day 3"
 }
