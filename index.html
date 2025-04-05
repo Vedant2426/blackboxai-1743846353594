@@ -5,13 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Agriculture Assistant</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              matcha: '#A5C882',
+            }
+          }
+        }
+      }
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Poppins', sans-serif; }
     </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-[#A5C882]">
     <!-- Navbar -->
     <nav class="bg-green-700 text-white p-4 shadow-lg">
         <div class="container mx-auto flex justify-between items-center">
@@ -70,5 +81,15 @@
     </main>
 
     <script src="main.js"></script>
+    
+    <!-- Footer with tractor image -->
+    <footer class="bg-green-800 py-6">
+        <div class="container mx-auto text-center">
+            <img src="https://images.pexels.com/photos/7931/pexels-photo.jpg" 
+                 alt="Tractor" 
+                 class="h-32 mx-auto object-contain">
+            <p class="text-white mt-4">© 2023 Smart Agriculture Assistant</p>
+        </div>
+    </footer>
 </body>
 </html>
