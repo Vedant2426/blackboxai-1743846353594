@@ -1,21 +1,21 @@
-// Language switching functionality
+// Enhanced language switching functionality
 document.addEventListener('DOMContentLoaded', function() {
     const languageSelector = document.getElementById('language-selector');
     
     // Load saved language preference or default to English
     const currentLang = localStorage.getItem('language') || 'en';
     languageSelector.value = currentLang;
-    updateLanguage(currentLang);
+    updateAllText(currentLang);
 
     // Add event listener for language changes
     languageSelector.addEventListener('change', function() {
         const selectedLang = this.value;
         localStorage.setItem('language', selectedLang);
-        updateLanguage(selectedLang);
+        updateAllText(selectedLang);
     });
 
-    // Function to update page content based on selected language
-    function updateLanguage(lang) {
+    // Function to update all text elements on the page
+    function updateAllText(lang) {
         fetch(`lang/${lang}.json`)
             .then(response => response.json())
             .then(translations => {
@@ -23,7 +23,33 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.querySelectorAll('[data-lang]').forEach(element => {
                     const key = element.getAttribute('data-lang');
                     if (translations[key]) {
-                        element.textContent = translations[key];
+                        // Handle different element types
+                        if (element.tagName === 'INPUT' && element.hasAttribute('placeholder')) {
+                            element.setAttribute('placeholder', translations[key]);
+                        } else if (element.tagName === 'OPTION' && element.hasAttribute('selected')) {
+                            element.textContent = translations[key];
+                        } else {
+                            element.textContent = translations[key];
+                        }
+                    }
+                });
+
+                // Update select options
+                document.querySelectorAll('select').forEach(select => {
+                    if (select.id !== 'language-selector') {
+                        Array.from(select.options).forEach(option => {
+                            if (option.value && translations[option.value]) {
+                                option.textContent = translations[option.value];
+                            }
+                        });
+                    }
+                });
+
+                // Update button values
+                document.querySelectorAll('button[data-lang]').forEach(button => {
+                    const key = button.getAttribute('data-lang');
+                    if (translations[key]) {
+                        button.textContent = translations[key];
                     }
                 });
             })
@@ -31,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Initialize the page with the current language
-    updateLanguage(currentLang);
+    updateAllText(currentLang);
 });
 
 // Dummy data for crop recommendations (will be replaced with API calls later)
